@@ -48,16 +48,20 @@ namespace FIUChat.DatabaseAccessObject
                 {
                     case MongoDBExecuteCommand.Create:
                         collection.InsertOne(entity);
-                        mongoDBResultState.Message = "Successfully created Student in the database.";
+                        mongoDBResultState.Message = $"Successfully created {entity.GetType()} in the database.";
                         mongoDBResultState.Result = MongoDBResult.Success;
                         break;
 
                     case MongoDBExecuteCommand.Update:
                         collection.ReplaceOne(x => x.ID == entity.ID, entity);
+                        mongoDBResultState.Message = $"Successfully updated {entity.GetType()} in the collection.";
+                        mongoDBResultState.Result = MongoDBResult.Success;
                         break;
 
                     case MongoDBExecuteCommand.Delete:
                         collection.DeleteOne(x => x.ID == entity.ID);
+                        mongoDBResultState.Message = $"Successfully deleted {entity.GetType()} in the collection.";
+                        mongoDBResultState.Result = MongoDBResult.Success;
                         break;
 
                     default:
