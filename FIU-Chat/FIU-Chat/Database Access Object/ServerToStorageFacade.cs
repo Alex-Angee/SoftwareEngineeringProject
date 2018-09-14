@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using FIUChat.DatabaseAccessObject.CommandObjects;
 
 namespace FIUChat.DatabaseAccessObject
@@ -11,7 +12,7 @@ namespace FIUChat.DatabaseAccessObject
         private MongoDB mongoDB;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:FIUChat.DatabaseAccessObject.ServerToStorageFacade"/> class.
+        /// Initializes a new instance of the <see cref="ServerToStorageFacade"/> class.
         /// </summary>
         public ServerToStorageFacade()
         {
@@ -24,10 +25,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public MongoDBResultState CreateObject<T>(T entity)
+        public async Task<MongoDBResultState> CreateObject<T>(T entity)
             where T : Command
         {
-            return mongoDB.CreateObject(entity);
+            return await mongoDB.CreateObject(entity);
         }
 
         /// <summary>
@@ -36,10 +37,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public T ReadObject<T>(T entity)
+        public async Task<T> ReadObject<T>(T entity)
             where T : Command
         {
-            return mongoDB.ReadObject(entity);
+            return await mongoDB.ReadObject(entity);
         }
 
         /// <summary>
@@ -48,10 +49,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public MongoDBResultState UpdateObject<T>(T entity)
+        public async Task<MongoDBResultState> UpdateObject<T>(T entity)
             where T : Command
         {
-            return mongoDB.UpdateObject(entity);
+            return await mongoDB.UpdateObject(entity);
         }
 
         /// <summary>
@@ -60,10 +61,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public MongoDBResultState DeleteObject<T>(T entity)
+        public async Task<MongoDBResultState> DeleteObject<T>(T entity)
             where T : Command
         {
-            return mongoDB.DeleteObject(entity);
+            return await mongoDB.DeleteObject(entity);
         }
 
         /// <summary>
@@ -71,9 +72,9 @@ namespace FIUChat.DatabaseAccessObject
         /// </summary>
         /// <returns>The message.</returns>
         /// <param name="message">Message.</param>
-        public MongoDBResultState SendMessage(Message message)
+        public async Task<MongoDBResultState> SendMessage(Message message)
         {
-            return mongoDB.SendMessage(message);
+            return await mongoDB.SendMessage(message);
         }
     }
 }

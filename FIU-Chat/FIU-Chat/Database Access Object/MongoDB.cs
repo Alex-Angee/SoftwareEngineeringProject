@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using FIUChat.DatabaseAccessObject.CommandObjects;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -28,7 +29,7 @@ namespace FIUChat.DatabaseAccessObject
         /// </summary>
         /// <returns><c>true</c>, if to mongo db was connected, <c>false</c> otherwise.</returns>
         /// <param name="entity">Entity.</param>
-        private MongoDBResultState ExecuteMongoDBCommand<T>(T entity, MongoDBExecuteCommand mongoDBExecuteCommand)
+        private async Task<MongoDBResultState> ExecuteMongoDBCommand<T>(T entity, MongoDBExecuteCommand mongoDBExecuteCommand)
             where T: Command
         {
             MongoDBResultState mongoDBResultState = new MongoDBResultState();
@@ -47,19 +48,19 @@ namespace FIUChat.DatabaseAccessObject
                 switch(mongoDBExecuteCommand)
                 {
                     case MongoDBExecuteCommand.Create:
-                        collection.InsertOne(entity);
+                        await collection.InsertOneAsync(entity);
                         mongoDBResultState.Message = $"Successfully created {entity.GetType()} in the database.";
                         mongoDBResultState.Result = MongoDBResult.Success;
                         break;
 
                     case MongoDBExecuteCommand.Update:
-                        collection.ReplaceOne(x => x.ID == entity.ID, entity);
+                        await collection.ReplaceOneAsync(x => x.ID == entity.ID, entity);
                         mongoDBResultState.Message = $"Successfully updated {entity.GetType()} in the collection.";
                         mongoDBResultState.Result = MongoDBResult.Success;
                         break;
 
                     case MongoDBExecuteCommand.Delete:
-                        collection.DeleteOne(x => x.ID == entity.ID);
+                        await collection.DeleteOneAsync(x => x.ID == entity.ID);
                         mongoDBResultState.Message = $"Successfully deleted {entity.GetType()} in the collection.";
                         mongoDBResultState.Result = MongoDBResult.Success;
                         break;
@@ -90,7 +91,7 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        private T FindObject<T>(T entity)
+        private async Task<T> FindObject<T>(T entity)
             where T : Command
         {
             T result;
@@ -106,7 +107,7 @@ namespace FIUChat.DatabaseAccessObject
                     return null;
                 }
 
-                result = collection.Find(x => x.ID == command.ID).FirstOrDefault();
+                result = (T)await collection.FindAsync(x => x.ID == command.ID);
 
             }
             catch(Exception ex)
@@ -150,7 +151,7 @@ namespace FIUChat.DatabaseAccessObject
         /// </summary>
         /// <returns>The message to mongo db.</returns>
         /// <param name="entity">Message.</param>
-        private MongoDBResultState SendMessageToMongoDB<T>(T entity)
+        private async Task<MongoDBResultState> SendMessageToMongoDB<T>(T entity)
             where T : Message
         {
             MongoDBResultState mongoDBResultState = new MongoDBResultState();
@@ -165,7 +166,7 @@ namespace FIUChat.DatabaseAccessObject
 
                 var collection = mongoDbServer.GetCollection<T>($"{entity.GroupChatName}");
 
-                collection.InsertOne(entity);
+                await collection.InsertOneAsync(entity);
                 mongoDBResultState.Result = MongoDBResult.Success;
                 mongoDBResultState.Message = $"Successfully stored message in the {entity.GroupChatName} collection.";
             }
@@ -184,10 +185,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public MongoDBResultState CreateObject<T>(T entity)
+        public async Task<MongoDBResultState> CreateObject<T>(T entity)
             where T : Command
         {
-            return ExecuteMongoDBCommand(entity, MongoDBExecuteCommand.Create);
+            return await ExecuteMongoDBCommand(entity, MongoDBExecuteCommand.Create);
         }
 
         /// <summary>
@@ -196,10 +197,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Id.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public T ReadObject<T>(T entity)
+        public async Task<T> ReadObject<T>(T entity)
             where T : Command
         {
-            return this.FindObject(entity);
+            return await this.FindObject(entity);
         }
 
         /// <summary>
@@ -208,10 +209,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public MongoDBResultState UpdateObject<T>(T entity)
+        public async Task<MongoDBResultState> UpdateObject<T>(T entity)
             where T : Command
         {
-            return ExecuteMongoDBCommand(entity, MongoDBExecuteCommand.Update);
+            return await ExecuteMongoDBCommand(entity, MongoDBExecuteCommand.Update);
         }
 
         /// <summary>
@@ -220,10 +221,10 @@ namespace FIUChat.DatabaseAccessObject
         /// <returns>The object.</returns>
         /// <param name="entity">Entity.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public MongoDBResultState DeleteObject<T>(T entity)
+        public async Task<MongoDBResultState> DeleteObject<T>(T entity)
             where T : Command
         {
-            return ExecuteMongoDBCommand(entity, MongoDBExecuteCommand.Delete);
+            return await ExecuteMongoDBCommand(entity, MongoDBExecuteCommand.Delete);
         }
 
         /// <summary>
@@ -231,9 +232,9 @@ namespace FIUChat.DatabaseAccessObject
         /// </summary>
         /// <returns>The message.</returns>
         /// <param name="message">Message.</param>
-        public MongoDBResultState SendMessage(Message message)
+        public async Task<MongoDBResultState> SendMessage(Message message)
         {
-            return this.SendMessageToMongoDB(message);
+            return await this.SendMessageToMongoDB(message);
         }
     }
 
