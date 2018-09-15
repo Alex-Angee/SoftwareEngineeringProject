@@ -19,5 +19,8 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
 
         [BsonId]
         public Guid ID { get; set; }
+
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }
