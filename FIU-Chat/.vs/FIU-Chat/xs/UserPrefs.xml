@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{AA1DE125-9835-4472-9CFF-AD2155C14F22}|Default">
   <MonoDevelop.Ide.ItemProperties.FIU-Chat PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/Database Access Object/ServerToStorageFacade.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/Database Access Object/Command Objects/Message.cs">
     <Files>
-      <File FileName="FIU-Chat/Database Access Object/MongoDB.cs" Line="164" Column="34" />
-      <File FileName="FIU-Chat/Database Access Object/MongoDBResultState.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/Database Access Object/Command Objects/Command.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/Database Access Object/ServerToStorageFacade.cs" Line="27" Column="23" />
+      <File FileName="FIU-Chat/Database Access Object/MongoDB.cs" Line="145" Column="1" />
+      <File FileName="FIU-Chat/Database Access Object/Command Objects/Student.cs" Line="12" Column="45" />
+      <File FileName="FIU-Chat/Database Access Object/ServerToStorageFacade.cs" Line="92" Column="6" />
+      <File FileName="FIU-Chat/Identity/AuthenticateResultState.cs" Line="23" Column="39" />
+      <File FileName="FIU-Chat/Identity/AuthenticateUser.cs" Line="49" Column="93" />
+      <File FileName="FIU-Chat/Database Access Object/Command Objects/Message.cs" Line="15" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

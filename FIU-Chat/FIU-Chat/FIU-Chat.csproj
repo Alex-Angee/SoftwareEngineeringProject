@@ -9,11 +9,12 @@
     <PackageReference Include="MongoDB.Driver" Version="2.7.0" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
     <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+    <PackageReference Include="BCrypt-Official" Version="0.1.109" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Database Access Object\" />
-    <Folder Include="Database Access Object\DB Schemas\" />
     <Folder Include="Database Access Object\Command Objects\" />
+    <Folder Include="Identity\" />
   </ItemGroup>
 </Project>

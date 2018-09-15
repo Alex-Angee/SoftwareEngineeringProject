@@ -12,6 +12,5 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
         public DateTime MessageSent { get; set; }
         public string Username { get; set; }
         public string PantherID { get; set; }
-        public string Email { get; set; }
     }
 }

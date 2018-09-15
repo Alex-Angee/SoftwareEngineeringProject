@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using FIUChat.DatabaseAccessObject.CommandObjects;
 using MongoDB.Bson;
@@ -104,7 +105,7 @@ namespace FIUChat.DatabaseAccessObject
                 if (collection == null)
                 {
                     Console.WriteLine($"Collection: {entity.GetType()} does not exsit.");
-                    return null;
+                    return default(T);
                 }
 
                 result = (T)await collection.FindAsync(x => x.ID == command.ID);
@@ -113,7 +114,41 @@ namespace FIUChat.DatabaseAccessObject
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return null;
+                return default(T);
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Finds the object by expression.
+        /// </summary>
+        /// <returns>The object by expression.</returns>
+        /// <param name="entity">Entity.</param>
+        /// <param name="expression">Expression.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        private async Task<T> FindObjectByExpression<T>(T entity, Expression expression)
+        {
+            T result;
+
+            try
+            {
+                var command = entity as Command;
+
+                var collection = this.ConnectToMongo(entity);
+                if (collection == null)
+                {
+                    Console.WriteLine($"Collection: {entity.GetType()} does not exsit.");
+                    return default(T);
+                }
+
+                var expressionFilterDefinition = new ExpressionFilterDefinition<T>((Expression<Func<T, bool>>)expression);
+                result = (T)await collection.FindAsync(expressionFilterDefinition);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return default(T);
             }
 
             return result;
@@ -235,6 +270,18 @@ namespace FIUChat.DatabaseAccessObject
         public async Task<MongoDBResultState> SendMessage(Message message)
         {
             return await this.SendMessageToMongoDB(message);
+        }
+
+        /// <summary>
+        /// Reads the object by expression.
+        /// </summary>
+        /// <returns>The object by expression.</returns>
+        /// <param name="entity">Entity.</param>
+        /// <param name="expression">Expression.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public async Task<T> ReadObjectByExpression<T>(T entity, Expression expression)
+        {
+            return await this.FindObjectByExpression(entity, expression);
         }
     }
 

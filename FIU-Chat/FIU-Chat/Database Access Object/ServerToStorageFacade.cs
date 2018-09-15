@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using FIUChat.DatabaseAccessObject.CommandObjects;
 
@@ -28,7 +29,7 @@ namespace FIUChat.DatabaseAccessObject
         public async Task<MongoDBResultState> CreateObject<T>(T entity)
             where T : Command
         {
-            return await mongoDB.CreateObject(entity);
+            return await this.mongoDB.CreateObject(entity);
         }
 
         /// <summary>
@@ -40,7 +41,7 @@ namespace FIUChat.DatabaseAccessObject
         public async Task<T> ReadObject<T>(T entity)
             where T : Command
         {
-            return await mongoDB.ReadObject(entity);
+            return await this.mongoDB.ReadObject(entity);
         }
 
         /// <summary>
@@ -52,7 +53,7 @@ namespace FIUChat.DatabaseAccessObject
         public async Task<MongoDBResultState> UpdateObject<T>(T entity)
             where T : Command
         {
-            return await mongoDB.UpdateObject(entity);
+            return await this.mongoDB.UpdateObject(entity);
         }
 
         /// <summary>
@@ -64,7 +65,7 @@ namespace FIUChat.DatabaseAccessObject
         public async Task<MongoDBResultState> DeleteObject<T>(T entity)
             where T : Command
         {
-            return await mongoDB.DeleteObject(entity);
+            return await this.mongoDB.DeleteObject(entity);
         }
 
         /// <summary>
@@ -74,7 +75,19 @@ namespace FIUChat.DatabaseAccessObject
         /// <param name="message">Message.</param>
         public async Task<MongoDBResultState> SendMessage(Message message)
         {
-            return await mongoDB.SendMessage(message);
+            return await this.mongoDB.SendMessage(message);
+        }
+
+        /// <summary>
+        /// Reads the object by expression.
+        /// </summary>
+        /// <returns>The object by expression.</returns>
+        /// <param name="entity">Entity.</param>
+        /// <param name="expression">Expression.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public async Task<T> ReadObjectByExpression<T>(T entity, Expression expression)
+        {
+            return await this.mongoDB.ReadObjectByExpression(entity, expression);
         }
     }
 }
