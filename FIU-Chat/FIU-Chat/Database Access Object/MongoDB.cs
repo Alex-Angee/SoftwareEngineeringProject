@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using FIUChat.DatabaseAccessObject.CommandObjects;
@@ -127,7 +128,7 @@ namespace FIUChat.DatabaseAccessObject
         /// <param name="entity">Entity.</param>
         /// <param name="expression">Expression.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        private async Task<T> FindObjectByExpression<T>(T entity, Expression expression)
+        private async Task<T> FindObjectByExpression<T>(T entity, Expression<Func<T, bool>> expression)
         {
             T result;
 
@@ -142,8 +143,9 @@ namespace FIUChat.DatabaseAccessObject
                     return default(T);
                 }
 
-                var expressionFilterDefinition = new ExpressionFilterDefinition<T>((Expression<Func<T, bool>>)expression);
-                result = (T)await collection.FindAsync(expressionFilterDefinition);
+                var filterDefinition = Builders<T>.Filter.Where(expression);
+                var results = await collection.Find(filterDefinition).ToListAsync();
+                result = results.FirstOrDefault();
             }
             catch (Exception ex)
             {
@@ -279,7 +281,7 @@ namespace FIUChat.DatabaseAccessObject
         /// <param name="entity">Entity.</param>
         /// <param name="expression">Expression.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public async Task<T> ReadObjectByExpression<T>(T entity, Expression expression)
+        public async Task<T> ReadObjectByExpression<T>(T entity, Expression<Func<T, bool>> expression)
         {
             return await this.FindObjectByExpression(entity, expression);
         }
