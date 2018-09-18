@@ -85,7 +85,7 @@ namespace FIUChat.DatabaseAccessObject
         /// <param name="entity">Entity.</param>
         /// <param name="expression">Expression.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public async Task<T> ReadObjectByExpression<T>(T entity, Expression expression)
+        public async Task<T> ReadObjectByExpression<T>(T entity, Expression<Func<T, bool>> expression)
         {
             return await this.mongoDB.ReadObjectByExpression(entity, expression);
         }
