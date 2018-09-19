@@ -72,7 +72,6 @@ namespace FIUChat.DatabaseAccessObject
                         mongoDBResultState.Result = MongoDBResult.Failure;
                         break;
                 }
-
             }
             catch(MongoDuplicateKeyException dupEx)
             {
@@ -201,11 +200,11 @@ namespace FIUChat.DatabaseAccessObject
                 MongoClient client = new MongoClient(setting);
                 var mongoDbServer = client.GetDatabase(DBName);
 
-                var collection = mongoDbServer.GetCollection<T>($"{entity.GroupChatName}");
+                var collection = mongoDbServer.GetCollection<T>($"{entity.GroupChatName}Messages");
 
                 await collection.InsertOneAsync(entity);
                 mongoDBResultState.Result = MongoDBResult.Success;
-                mongoDBResultState.Message = $"Successfully stored message in the {entity.GroupChatName} collection.";
+                mongoDBResultState.Message = $"Successfully stored message in the {entity.GroupChatName}Messages collection.";
             }
             catch (Exception ex)
             {

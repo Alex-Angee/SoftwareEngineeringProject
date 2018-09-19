@@ -27,5 +27,8 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
 
         [Required]
         public string ProfessorName { get; set; }
+
+        [Required]
+        public string AcademicYear { get; set; }
     }
 }

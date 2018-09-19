@@ -8,6 +8,7 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
         }
 
         public string GroupChatName { get; set; }
+        public Guid GroupChatID { get; set; }
         public string MessageContents { get; set; }
         public DateTime MessageSent { get; set; }
         public string Username { get; set; }

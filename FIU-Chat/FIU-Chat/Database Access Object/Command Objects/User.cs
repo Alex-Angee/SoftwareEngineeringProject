@@ -9,7 +9,7 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
         public User(Guid? Id)
             : base(Id)
         {
-            this.classDictionary = new Dictionary<string, string>();
+            this.ClassDictionary = new Dictionary<string, Dictionary<string, string>>();
         }
 
         [Required]
@@ -25,7 +25,7 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
         public string PantherID { get; set; }
 
         // Maps from Course ID to Section ID
-        public Dictionary<string, string> classDictionary { get; set; }
+        public Dictionary <string, Dictionary<string, string>> ClassDictionary { get; set; }
     }
 
     public enum Entitlement
