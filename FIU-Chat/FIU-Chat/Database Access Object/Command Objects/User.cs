@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using FIUChat.Enums;
 
 namespace FIUChat.DatabaseAccessObject.CommandObjects
 {
@@ -26,13 +27,5 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
 
         // Maps from Course ID to Section ID
         public Dictionary <string, Dictionary<string, string>> ClassDictionary { get; set; }
-    }
-
-    public enum Entitlement
-    {
-        Student = 10,
-        Admin = 20,
-        Bot = 30,
-        Unknown = 0
     }
 }

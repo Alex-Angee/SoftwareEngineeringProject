@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -9,50 +10,87 @@ using FIUChat.DatabaseAccessObject;
 using FIUChat.Identity;
 using FIUChat.DatabaseAccessObject.CommandObjects;
 using System.Linq.Expressions;
+using System.Net.Mime;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FIU_Chat.Controllers
 {
     public class AccountController : Controller
     {
+        private const string SECRET_KEY = "FIUCHATSECRETKEY";
+        public static SymmetricSecurityKey SIGNING_KEY = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SECRET_KEY));
         private ServerToStorageFacade serverToStorageFacade = new ServerToStorageFacade();
         private AuthenticateUser authenticateUser = new AuthenticateUser();
 
-        // GET: /login/
-        public async Task<IActionResult> Index(LoginModel loginModel)
+        public IActionResult Index()
         {
-            Debug.WriteLine(loginModel.inputEmail);
+            return View();
+        }
+
+        // Post: /login/
+        [HttpPost]
+        public async Task<IActionResult> Login([FromBody]LoginModel loginModel)
+        {
             if (ModelState.IsValid)
             {
                 var mapLoginModelToUser = new MapLoginModelToUser();
                 var user = await mapLoginModelToUser.MapObject(loginModel);
 
+                // If login user with those credentials does not exist
                 if(user == null)
                 {
-                    return View();
+                    return BadRequest();
                 }
+
                 else
                 {
                     var result = await this.authenticateUser.Authenticate(user);
 
-                    if(result.Result == AuthenticateResult.Success)
+                    if(result.Result == FIUChat.Enums.AuthenticateResult.Success)
                     {
                         // SUCCESSFUL LOGIN
-                        return RedirectToAction("Index", "Home");
+                        // Creating and storing cookies
+
+                        var token = Json(new
+                        {
+                            data = this.GenerateToken(user.Email, user.PantherID),
+                            redirectUrl = Url.Action("Index","Home"),
+                            success = true
+                        });
+                        return Ok(token);
                     }
                     else
                     {
-                        // 
-                        return View();
+                        // Unsuccessful login
+                        var token = Json(new
+                        {
+                            success = false
+                        });
+                        return Ok(token);
                     }
                 }
             }
 
-            return View();
+            return BadRequest();
         }
 
-        public IActionResult LoggedIn()
+        private string GenerateToken(string email, string pantherId)
         {
-            return View();    
+            var claimsData = new[] { new Claim(ClaimTypes.Email, email), new Claim(ClaimTypes.Actor, pantherId) };
+
+            var signInCredentials = new SigningCredentials(SIGNING_KEY, SecurityAlgorithms.HmacSha256);
+            var token = new JwtSecurityToken(
+                issuer: "localhost",
+                audience: "localhost",
+                expires: DateTime.Now.AddDays(7),
+                claims: claimsData,
+                signingCredentials: signInCredentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -86,6 +124,8 @@ namespace FIU_Chat.Controllers
                 Password = loginModel.inputPassword,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                PantherID = user.PantherID,
+                ClassDictionary = user.ClassDictionary,
                 UserEntitlement = user.UserEntitlement
             };
         }
