@@ -9,6 +9,7 @@ using FIUChat.DatabaseAccessObject;
 using FIUChat.Identity;
 using FIUChat.DatabaseAccessObject.CommandObjects;
 using System.Linq.Expressions;
+using Microsoft.AspNetCore.Authentication;
 
 namespace FIU_Chat.Controllers
 {
@@ -17,31 +18,34 @@ namespace FIU_Chat.Controllers
         private ServerToStorageFacade serverToStorageFacade = new ServerToStorageFacade();
         private AuthenticateUser authenticateUser = new AuthenticateUser();
 
-        // GET: /login/
+        // Post: /login/
         public async Task<IActionResult> Index(LoginModel loginModel)
         {
-            Debug.WriteLine(loginModel.inputEmail);
             if (ModelState.IsValid)
             {
                 var mapLoginModelToUser = new MapLoginModelToUser();
                 var user = await mapLoginModelToUser.MapObject(loginModel);
 
+                // If login user with those credentials does not exist
                 if(user == null)
                 {
                     return View();
                 }
+
                 else
                 {
                     var result = await this.authenticateUser.Authenticate(user);
 
-                    if(result.Result == AuthenticateResult.Success)
+                    if(result.Result == FIUChat.Identity.AuthenticateResult.Success)
                     {
                         // SUCCESSFUL LOGIN
+                        // Creating and storing cookies
+
                         return RedirectToAction("Index", "Home");
                     }
                     else
                     {
-                        // 
+                        // Unsuccessful login
                         return View();
                     }
                 }

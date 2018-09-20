@@ -1,22 +1,23 @@
 ﻿<Properties StartupConfiguration="{AA1DE125-9835-4472-9CFF-AD2155C14F22}|Default">
   <MonoDevelop.Ide.ItemProperties.FIU-Chat PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/Database Access Object/Command Objects/GroupChat.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/Controllers/AccountController.cs">
     <Files>
-      <File FileName="FIU-Chat/Database Access Object/MongoDB.cs" Line="208" Column="113" />
+      <File FileName="FIU-Chat/Database Access Object/MongoDB.cs" Line="74" Column="18" />
       <File FileName="FIU-Chat/Database Access Object/Command Objects/Message.cs" Line="11" Column="45" />
       <File FileName="FIU-Chat/Controllers/LoginController.cs" Line="1" Column="1" />
       <File FileName="FIU-Chat/Identity/AuthenticateResultState.cs" Line="31" Column="35" />
       <File FileName="FIU-Chat/Identity/AuthenticateUser.cs" Line="1" Column="1" />
       <File FileName="FIU-Chat/Database Access Object/ServerToStorageFacade.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/Controllers/RegisterController.cs" Line="56" Column="124" />
-      <File FileName="FIU-Chat/Database Access Object/Command Objects/GroupChat.cs" Line="31" Column="19" />
+      <File FileName="FIU-Chat/Controllers/RegisterController.cs" Line="56" Column="157" />
+      <File FileName="FIU-Chat/Database Access Object/Command Objects/GroupChat.cs" Line="32" Column="48" />
+      <File FileName="FIU-Chat/Controllers/AccountController.cs" Line="20" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/LoginController.cs" relfile="FIU-Chat/Controllers/LoginController.cs" line="27" column="1" />
-      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Database Access Object/MongoDB.cs" relfile="FIU-Chat/Database Access Object/MongoDB.cs" line="146" column="1" />
+      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Database Access Object/MongoDB.cs" relfile="FIU-Chat/Database Access Object/MongoDB.cs" line="145" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
