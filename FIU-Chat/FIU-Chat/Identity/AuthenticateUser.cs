@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using BCrypt.Net;
 using FIUChat.DatabaseAccessObject;
 using FIUChat.DatabaseAccessObject.CommandObjects;
+using FIUChat.Enums;
 
 namespace FIUChat.Identity
 {

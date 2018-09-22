@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using FIUChat.DatabaseAccessObject.CommandObjects;
+using FIUChat.Enums;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -284,17 +285,5 @@ namespace FIUChat.DatabaseAccessObject
         {
             return await this.FindObjectByExpression(entity, expression);
         }
-    }
-
-    /// <summary>
-    /// Mongo DBE xecute command.
-    /// </summary>
-    enum MongoDBExecuteCommand
-    {
-        Create = 10,
-        Read = 20,
-        Update = 30,
-        Delete = 40,
-        Unknown = 50
     }
 }
