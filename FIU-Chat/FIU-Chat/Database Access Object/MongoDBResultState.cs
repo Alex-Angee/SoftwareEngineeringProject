@@ -1,4 +1,6 @@
 ﻿using System;
+using FIUChat.Enums;
+
 namespace FIUChat.DatabaseAccessObject
 {
     public class MongoDBResultState
@@ -25,13 +27,5 @@ namespace FIUChat.DatabaseAccessObject
             this.Message = message;
             this.Result = result;
         }
-    }
-
-    public enum MongoDBResult
-    {
-        Success = 10,
-        Failure = 20,
-        AlreadyExists = 30,
-        Unknown = 0
     }
 }

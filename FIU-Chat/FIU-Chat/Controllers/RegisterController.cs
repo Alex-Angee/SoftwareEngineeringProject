@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using FIUChat.DatabaseAccessObject;
 using FIUChat.DatabaseAccessObject.CommandObjects;
+using FIUChat.Enums;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FIU_Chat.Controllers

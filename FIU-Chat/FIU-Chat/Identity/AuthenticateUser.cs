@@ -1,9 +1,15 @@
 ﻿using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq.Expressions;
+using System.Security.Principal;
+using System.Text;
 using System.Threading.Tasks;
 using BCrypt.Net;
 using FIUChat.DatabaseAccessObject;
 using FIUChat.DatabaseAccessObject.CommandObjects;
+using FIUChat.Enums;
+using FIU_Chat.Controllers;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FIUChat.Identity
 {
@@ -65,5 +71,43 @@ namespace FIUChat.Identity
             }
         }
 
+        public async Task<AuthenticateResultState> ValidateToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var validationParameters = GetValidationParameters();
+
+            SecurityToken validateToken;
+            try
+            {
+                IPrincipal principal = tokenHandler.ValidateToken(token, validationParameters, out validateToken);
+            }
+            catch (SecurityTokenException)
+            {
+                return new AuthenticateResultState
+                {
+                    Message = "You have an invalid token.",
+                    Result = AuthenticateResult.Failure
+                };
+            }
+
+            return new AuthenticateResultState
+            {
+                Message = "Valid token.",
+                Result = AuthenticateResult.Success
+            };
+        }
+
+        private TokenValidationParameters GetValidationParameters()
+        {
+            return new TokenValidationParameters()
+            {
+                ValidateLifetime = true, // Because there is no expiration in the generated token
+                ValidateAudience = true, // Because there is no audiance in the generated token
+                ValidateIssuer = true,   // Because there is no issuer in the generated token
+                ValidIssuer = "localhost",
+                ValidAudience = "localhost",
+                IssuerSigningKey = AccountController.SIGNING_KEY // The same key as the one that generate the token
+            };
+        }
     }
 }
