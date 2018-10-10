@@ -1,4 +1,6 @@
 ﻿using System;
+using FIUChat.Enums;
+
 namespace FIUChat.Identity
 {
     public class AuthenticateResultState
@@ -25,14 +27,5 @@ namespace FIUChat.Identity
             this.Message = message;
             this.Result = result;
         }
-
     }
-
-    public enum AuthenticateResult
-    {
-        Success = 10,
-        Failure = 20,
-        Unknown = 0
-    }
-
 }
