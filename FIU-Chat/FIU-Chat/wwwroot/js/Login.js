@@ -16,17 +16,20 @@
             data: JSON.stringify(loginModel),
             contentType: 'application/json; charset=utf-8;',
             success: function (response) {
-                console.log(response.value.success);
                 var success = response.value.success;
                 if (success !== true)
                 {
                     alert("Incorrect username/password.");
+                    $("#inputPassword").val("");
                 }
-                var token = response.value.data;
-                localStorage.setItem("token", token);
-                alert("You have successfully logged in.");
-                setHeader();
-                redirect(response.value.redirectUrl);
+                else
+                {
+                    var token = response.value.data;
+                    localStorage.setItem("token", token);
+                    alert("You have successfully logged in.");
+                    setHeader();
+                    redirect(response.value.redirectUrl);
+                }
             }
         });
     });

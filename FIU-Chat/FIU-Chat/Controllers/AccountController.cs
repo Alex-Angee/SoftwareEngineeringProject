@@ -42,7 +42,12 @@ namespace FIU_Chat.Controllers
                 // If login user with those credentials does not exist
                 if(user == null)
                 {
-                    return BadRequest();
+                    // Unsuccessful login
+                    var unsuccessfulToken = Json(new
+                    {
+                        success = false
+                    });
+                    return Ok(unsuccessfulToken);
                 }
 
                 else
@@ -54,27 +59,32 @@ namespace FIU_Chat.Controllers
                         // SUCCESSFUL LOGIN
                         // Creating and storing cookies
 
-                        var token = Json(new
+                        var successfulToken = Json(new
                         {
                             data = this.GenerateToken(user.Email, user.PantherID),
                             redirectUrl = Url.Action("Index","Home"),
                             success = true
                         });
-                        return Ok(token);
+                        return Ok(successfulToken);
                     }
                     else
                     {
                         // Unsuccessful login
-                        var token = Json(new
+                        var unsuccessfulToken = Json(new
                         {
                             success = false
                         });
-                        return Ok(token);
+                        return Ok(unsuccessfulToken);
                     }
                 }
             }
 
-            return BadRequest();
+            // Unsuccessful login
+            var token = Json(new
+            {
+                success = false
+            });
+            return Ok(token);
         }
 
         private string GenerateToken(string email, string pantherId)
@@ -109,7 +119,7 @@ namespace FIU_Chat.Controllers
 
         public async Task<User> MapObject(LoginModel loginModel)
         {
-            Expression<Func<User, bool>> expression = x => x.Email == loginModel.inputEmail;
+            Expression<Func<User, bool>> expression = x => x.Email.Equals(loginModel.inputEmail, StringComparison.InvariantCultureIgnoreCase);
 
             var user = await this.serverToStorageFacade.ReadObjectByExpression(new User(Guid.NewGuid()), expression);
 

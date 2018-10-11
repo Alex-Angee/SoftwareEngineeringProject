@@ -3,7 +3,7 @@
 $(document).one("ready", function () {
     var loggedIn = checkLogin();
 
-    if (loggedIn === true && shouldlogin == true) {
+    if (loggedIn === true && shouldlogin === true) {
         console.log("Not logged in");
         setHeader();
         redirectToHome();
@@ -33,7 +33,6 @@ function redirectToHome() {
             $("body").html(response);
         }
     });
-    console.log("Called home page");
 }
 
 function checkLogin() {
