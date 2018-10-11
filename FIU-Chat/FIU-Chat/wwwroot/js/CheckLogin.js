@@ -1,6 +1,6 @@
 ﻿var shouldlogin = true;
 
-$(document).one("ready", function () {
+function runLoginCheck() {
     var loggedIn = checkLogin();
 
     if (loggedIn === true && shouldlogin === true) {
@@ -13,7 +13,7 @@ $(document).one("ready", function () {
         redirectToLogin();
     }
     return true;
-});
+}
 
 function setHeader() {
     $.ajaxSetup({
@@ -60,3 +60,8 @@ function logOut() {
     localStorage.clear();
     redirectToLogin();
 }
+
+window.addEventListener('load',
+    function() {
+        runLoginCheck();
+    });

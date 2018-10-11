@@ -119,7 +119,8 @@ namespace FIU_Chat.Controllers
 
         public async Task<User> MapObject(LoginModel loginModel)
         {
-            Expression<Func<User, bool>> expression = x => x.Email.Equals(loginModel.inputEmail, StringComparison.InvariantCultureIgnoreCase);
+            loginModel.inputEmail = loginModel.inputEmail.ToLower();
+            Expression<Func<User, bool>> expression = x => x.Email == loginModel.inputEmail;
 
             var user = await this.serverToStorageFacade.ReadObjectByExpression(new User(Guid.NewGuid()), expression);
 

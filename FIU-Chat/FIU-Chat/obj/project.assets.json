@@ -13363,28 +13363,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/alexangee/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\ch33f\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/FIU-Chat.csproj",
+      "projectUniqueName": "C:\\Users\\ch33f\\Documents\\Projects\\SoftwareEngineeringProject\\FIU-Chat\\FIU-Chat\\FIU-Chat.csproj",
       "projectName": "FIU-Chat",
-      "projectPath": "/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/FIU-Chat.csproj",
-      "packagesPath": "/Users/alexangee/.nuget/packages/",
-      "outputPath": "/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj",
+      "projectPath": "C:\\Users\\ch33f\\Documents\\Projects\\SoftwareEngineeringProject\\FIU-Chat\\FIU-Chat\\FIU-Chat.csproj",
+      "packagesPath": "C:\\Users\\ch33f\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ch33f\\Documents\\Projects\\SoftwareEngineeringProject\\FIU-Chat\\FIU-Chat\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/alexangee/.config/NuGet/NuGet.Config"
+        "C:\\Users\\ch33f\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13401,40 +13403,40 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "BCrypt-Official": {
+            "target": "Package",
+            "version": "[0.1.109, )"
+          },
           "JWT": {
             "target": "Package",
-            "version": "4.0.0"
+            "version": "[4.0.0, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.1.1"
+            "version": "[2.1.1, )",
+            "autoReferenced": true
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.1.0, )",
+            "autoReferenced": true
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "2.1.4"
+            "version": "[2.1.4, )"
           },
           "MongoDB.Driver": {
             "target": "Package",
-            "version": "2.7.0"
+            "version": "[2.7.0, )"
           },
           "System.Linq": {
             "target": "Package",
-            "version": "4.3.0"
+            "version": "[4.3.0, )"
           },
           "System.Linq.Expressions": {
             "target": "Package",
-            "version": "4.3.0"
-          },
-          "BCrypt-Official": {
-            "target": "Package",
-            "version": "0.1.109"
-          },
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.1",
-            "autoReferenced": true
+            "version": "[4.3.0, )"
           }
         },
         "imports": [

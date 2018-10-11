@@ -18,7 +18,9 @@ namespace FIU_Chat.Controllers
         [HttpPost]
         [Route("api/[controller]/registeruser")]
         public async Task<MongoDBResultState> Register([FromBody]User user)
-        { 
+        {
+            user.Email = user.Email.ToLower();
+
             if (!user.ClassDictionary.Any() && user.UserEntitlement == Entitlement.Student)
             {
                 return new MongoDBResultState { Result = MongoDBResult.Failure, Message = "Must be enrolled in a class to register." };
