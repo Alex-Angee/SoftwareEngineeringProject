@@ -19,16 +19,22 @@
                 var success = response.value.success;
                 if (success !== true)
                 {
-                    alert("Incorrect username/password.");
-                    $("#inputPassword").val("");
+                    swal("Incorrect username/password!", {
+                        icon: "error",
+                        buttons: "Ok",
+                    });
                 }
                 else
                 {
                     var token = response.value.data;
                     localStorage.setItem("token", token);
-                    alert("You have successfully logged in.");
-                    setHeader();
-                    redirect(response.value.redirectUrl);
+
+                    swal("", "Login successfully!", "success")
+                    .then((value) => {
+                        setHeader();
+                        redirect(response.value.redirectUrl);
+                    });
+
                 }
             }
         });
