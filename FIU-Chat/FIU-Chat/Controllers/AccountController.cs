@@ -63,6 +63,7 @@ namespace FIU_Chat.Controllers
                         {
                             data = this.GenerateToken(user.Email, user.PantherID),
                             redirectUrl = Url.Action("Index","Home"),
+                            classes = user.ClassDictionary,
                             success = true
                         });
                         return Ok(successfulToken);

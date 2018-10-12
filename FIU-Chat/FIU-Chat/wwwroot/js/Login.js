@@ -29,6 +29,11 @@
                     var token = response.value.data;
                     localStorage.setItem("token", token);
 
+                    var classes = response.value.classes;
+                    localStorage.setItem("classes", classes);
+
+                    // MAKE SURE TO DO JSON.stringify(classes) decode the object stored.
+
                     swal("", "Login successfully!", "success")
                     .then((value) => {
                         setHeader();
