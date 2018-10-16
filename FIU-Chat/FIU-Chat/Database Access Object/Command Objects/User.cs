@@ -10,7 +10,7 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
         public User(Guid? Id)
             : base(Id)
         {
-            this.ClassDictionary = new Dictionary<string, Dictionary<string, string>>();
+            this.ClassDictionary = new Dictionary<string, List<Dictionary<string, string>>>();
         }
 
         [Required]
@@ -26,6 +26,7 @@ namespace FIUChat.DatabaseAccessObject.CommandObjects
         public string PantherID { get; set; }
 
         // Maps from Course ID to Section ID
-        public Dictionary <string, Dictionary<string, string>> ClassDictionary { get; set; }
+        [Required]
+        public Dictionary <string, List<Dictionary<string, string>>> ClassDictionary { get; set; }
     }
 }

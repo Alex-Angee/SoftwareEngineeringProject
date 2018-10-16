@@ -45,7 +45,7 @@ namespace FIU_Chat.Controllers
                 };
             }
 
-            return await this.serverToStorageFacade.CreateObject(user);;
+            return await this.serverToStorageFacade.CreateObject(user);
         }
 
         [HttpPost]
@@ -65,7 +65,7 @@ namespace FIU_Chat.Controllers
                 {
                     Result = MongoDBResult.AlreadyExists,
                     Message =
-                        $"The Group Chat with Course Id: {chat.CourseId}, Section Id: {chat.SectionId}, with Professor: {chat.ProfessorName} alreay exists."
+                        $"The Group Chat with Course Id: {chat.CourseId}, Section Id: {chat.SectionId}, with Professor: {chat.ProfessorName} already exists."
                 };
             }
 

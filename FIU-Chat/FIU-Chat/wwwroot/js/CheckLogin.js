@@ -15,14 +15,6 @@ function runLoginCheck() {
     return true;
 }
 
-function setHeader() {
-    $.ajaxSetup({
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', localStorage.getItem("token"));
-        }
-    });
-}
-
 function redirectToHome() {
     shouldlogin = false;
     $.ajax({

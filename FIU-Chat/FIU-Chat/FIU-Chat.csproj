@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Shared\._Layout_BASE_3812.cshtml.swp" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="wwwroot\css\signin.css" />
   </ItemGroup>
 
@@ -22,6 +25,8 @@
     <Folder Include="Database Access Object\" />
     <Folder Include="Database Access Object\Command Objects\" />
     <Folder Include="Identity\" />
+    <Folder Include="ApiModels\" />
+    <Folder Include="ApiModels\UpdateModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Database Access Object\Command Objects\Student.cs" />
