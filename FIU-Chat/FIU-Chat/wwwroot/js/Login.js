@@ -20,8 +20,9 @@
                 if (success !== true)
                 {
                     swal("Incorrect username/password!", {
-                        icon: "error",
-                        buttons: "Ok",
+                        icon: "error",                        
+                        timer: 1500,
+                        buttons: false
                     });
                 }
                 else
@@ -34,7 +35,11 @@
 
                     // MAKE SURE TO DO JSON.stringify(classes) decode the object stored.
 
-                    swal("", "Login successfully!", "success")
+                    swal("Login successfully!", {
+                        icon: "success",
+                        timer: 1500,
+                        buttons: false
+                    })
                     .then((value) => {
                         setHeader();
                         redirect(response.value.redirectUrl);

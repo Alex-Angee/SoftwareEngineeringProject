@@ -63,7 +63,7 @@ using FIU_Chat.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(44, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a98075d79ecc40e4bb3cac14db4f1872", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05c5eaeb89884cb397cf3bbd8f72a413", async() => {
                 BeginContext(70, 22, true);
                 WriteLiteral("\r\n <h1>WELCOME!</h1>\r\n");
                 EndContext();

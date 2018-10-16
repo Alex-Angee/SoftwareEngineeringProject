@@ -1,20 +1,18 @@
 ﻿<Properties StartupConfiguration="{AA1DE125-9835-4472-9CFF-AD2155C14F22}|Default">
   <MonoDevelop.Ide.ItemProperties.FIU-Chat PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/Controllers/UpdateController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/wwwroot/js/Login.js">
     <Files>
-      <File FileName="FIU-Chat/Views/Shared/_Layout.cshtml" Line="39" Column="22" />
+      <File FileName="FIU-Chat/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
       <File FileName="FIU-Chat/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/wwwroot/js/Login.js" Line="35" Column="89" />
+      <File FileName="FIU-Chat/wwwroot/js/Login.js" Line="1" Column="1" />
       <File FileName="FIU-Chat/Views/Account/Index.cshtml" Line="1" Column="1" />
       <File FileName="FIU-Chat/Database Access Object/Command Objects/GroupChat.cs" Line="32" Column="35" />
       <File FileName="FIU-Chat/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="FIU-Chat/wwwroot/js/CheckLogin.js" Line="16" Column="2" />
-      <File FileName="FIU-Chat/Controllers/AccountController.cs" Line="66" Column="39" />
-      <File FileName="FIU-Chat/Controllers/UpdateController.cs" Line="108" Column="57" />
-      <File FileName="FIU-Chat/wwwroot/js/NavBarFunctions.js" Line="19" Column="5" />
-      <File FileName="FIU-Chat/Database Access Object/Command Objects/User.cs" Line="13" Column="92" />
-      <File FileName="FIU-Chat/ApiModels/UpdateModel/AddClassModel.cs" Line="8" Column="1" />
-      <File FileName="FIU-Chat/ApiModels/UpdateModel/RemoveClassModel.cs" Line="11" Column="35" />
+      <File FileName="FIU-Chat/wwwroot/js/CheckLogin.js" Line="1" Column="1" />
+      <File FileName="FIU-Chat/Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="FIU-Chat/wwwroot/js/NavBarFunctions.js" Line="1" Column="1" />
+      <File FileName="FIU-Chat/Database Access Object/Command Objects/User.cs" Line="1" Column="1" />
+      <File FileName="FIU-Chat/ApiModels/UpdateModel/AddClassModel.cs" Line="1" Column="1" />
       <File FileName="FIU-Chat/Controllers/RegisterController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -22,7 +20,8 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/LoginController.cs" relfile="FIU-Chat/Controllers/LoginController.cs" line="27" column="1" />
-      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/UpdateController.cs" relfile="FIU-Chat/Controllers/UpdateController.cs" line="65" column="1" />
+      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/UpdateController.cs" relfile="FIU-Chat/Controllers/UpdateController.cs" line="130" column="1" />
+      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/UpdateController.cs" relfile="FIU-Chat/Controllers/UpdateController.cs" line="168" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
