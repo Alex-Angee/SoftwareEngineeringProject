@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Security.Principal;
 using System.Text;
@@ -10,12 +11,14 @@ using FIUChat.DatabaseAccessObject.CommandObjects;
 using FIUChat.Enums;
 using FIU_Chat.Controllers;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Generic;
 
 namespace FIUChat.Identity
 {
     public class AuthenticateUser
     {
         private ServerToStorageFacade serverToStorageFacade;
+        private const string SECRET_KEY = "FIUCHATSECRETKEY";
 
         public AuthenticateUser()
         {
@@ -71,7 +74,7 @@ namespace FIUChat.Identity
             }
         }
 
-        public async Task<AuthenticateResultState> ValidateToken(string token)
+        public AuthenticateResultState ValidateToken(string token)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var validationParameters = GetValidationParameters();
@@ -106,6 +109,11 @@ namespace FIUChat.Identity
             };
         }
 
+        public async Task<Dictionary<string, List<Dictionary<string, string>>>> GetUserDictionaryFromToken(string token)
+        {
+            return await this.GetUserDictionary(this.GetEmail(token));
+        }
+
         private TokenValidationParameters GetValidationParameters()
         {
             return new TokenValidationParameters()
@@ -117,6 +125,40 @@ namespace FIUChat.Identity
                 ValidAudience = "localhost",
                 IssuerSigningKey = AccountController.SIGNING_KEY // The same key as the one that generate the token
             };
+        }
+
+        private string GetEmail(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var tokenSecure = tokenHandler.ReadToken(token);
+            var validationParameters = GetValidationParameters();
+
+            var claims = tokenHandler.ValidateToken(token, validationParameters, out tokenSecure);
+
+            var claim = claims.Claims.First(c => c.Type.Contains("emailaddress"));
+
+            return claim.Value;
+        }
+
+        private async Task<Dictionary<string, List<Dictionary<string, string>>>> GetUserDictionary(string email)
+        {
+            Expression<Func<User, bool>> expression = x => x.Email == email;
+
+            var tempUser = new User(Guid.NewGuid())
+            {
+                Email = email
+            };
+
+            var foundUser = await this.serverToStorageFacade.ReadObjectByExpression(tempUser, expression);
+
+            if (foundUser == null)
+            {
+                return null;
+            }
+            else
+            {
+                return foundUser.ClassDictionary;
+            }
         }
     }
 }

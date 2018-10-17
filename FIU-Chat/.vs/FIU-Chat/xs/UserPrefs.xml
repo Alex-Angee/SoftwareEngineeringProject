@@ -1,28 +1,19 @@
 ﻿<Properties StartupConfiguration="{AA1DE125-9835-4472-9CFF-AD2155C14F22}|Default">
   <MonoDevelop.Ide.ItemProperties.FIU-Chat PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/wwwroot/js/CheckLogin.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FIU-Chat/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="FIU-Chat/Views/Shared/_Layout.cshtml" Line="41" Column="15" />
-      <File FileName="FIU-Chat/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/wwwroot/js/Login.js" Line="25" Column="39" />
-      <File FileName="FIU-Chat/Views/Account/Index.cshtml" Line="1" Column="1" />
-      <File FileName="FIU-Chat/Database Access Object/Command Objects/GroupChat.cs" Line="32" Column="35" />
-      <File FileName="FIU-Chat/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="FIU-Chat/wwwroot/js/CheckLogin.js" Line="53" Column="23" />
-      <File FileName="FIU-Chat/Controllers/AccountController.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/wwwroot/js/NavBarFunctions.js" Line="1" Column="1" />
-      <File FileName="FIU-Chat/Database Access Object/Command Objects/User.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/ApiModels/UpdateModel/AddClassModel.cs" Line="1" Column="1" />
-      <File FileName="FIU-Chat/Controllers/RegisterController.cs" Line="1" Column="1" />
+      <File FileName="FIU-Chat/Views/Classes/Index.cshtml" Line="7" Column="8" />
+      <File FileName="FIU-Chat/Views/Shared/_Layout.cshtml" Line="38" Column="55" />
+      <File FileName="FIU-Chat/Controllers/ClassesController.cs" Line="27" Column="18" />
+      <File FileName="FIU-Chat/wwwroot/js/NavBarFunctions.js" Line="16" Column="7" />
+      <File FileName="FIU-Chat/wwwroot/js/Login.js" Line="33" Column="58" />
+      <File FileName="FIU-Chat/Controllers/AccountController.cs" Line="66" Column="60" />
+      <File FileName="FIU-Chat/Views/Home/Index.cshtml" Line="8" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/LoginController.cs" relfile="FIU-Chat/Controllers/LoginController.cs" line="27" column="1" />
-      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/UpdateController.cs" relfile="FIU-Chat/Controllers/UpdateController.cs" line="130" column="1" />
-      <Breakpoint file="/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/Controllers/UpdateController.cs" relfile="FIU-Chat/Controllers/UpdateController.cs" line="168" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

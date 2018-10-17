@@ -28,10 +28,9 @@
                 else
                 {
                     var token = response.value.data;
-                    localStorage.setItem("token", token);
+                    localStorage.setItem("token", token);                   
 
-                    var classes = response.value.classes;
-                    localStorage.setItem("classes", classes);
+                    var classes = response.value.classes;                    
 
                     // MAKE SURE TO DO JSON.stringify(classes) decode the object stored.
 

@@ -4,10 +4,8 @@ function runLoginCheck() {
     var loggedIn = checkLogin();
 
     if (loggedIn === true && shouldlogin === true) {
-        console.log("Not logged in");
         setHeader();
         redirectToHome();
-        console.log("Logged in");
     }
     else if (loggedIn === false && shouldlogin === false) {
         redirectToLogin();
@@ -23,6 +21,14 @@ function redirectToHome() {
         url: 'Home/Index',
         success: function (response) {
             $("body").html(response);
+        }
+    });
+}
+
+function setHeader() {
+    $.ajaxSetup({
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', localStorage.getItem("token"));
         }
     });
 }

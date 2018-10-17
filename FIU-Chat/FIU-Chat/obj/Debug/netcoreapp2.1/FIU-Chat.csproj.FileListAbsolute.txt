@@ -1,33 +1,3 @@
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.deps.json
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.runtimeconfig.json
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.runtimeconfig.dev.json
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.dll
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.pdb
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.Views.dll
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.Views.pdb
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.csproj.CoreCompileInputs.cache
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorAssemblyInfo.cache
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorAssemblyInfo.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.AssemblyInfoInputs.cache
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.AssemblyInfo.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.TagHelpers.input.cache
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.TagHelpers.output.cache
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorCoreGenerate.cache
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Account/Index.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Account/LoggedIn.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/Error.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/_ViewImports.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/_ViewStart.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorTargetAssemblyInfo.cache
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorTargetAssemblyInfo.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.Views.pdb
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.dll
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.pdb
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.csproj.CopyComplete
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.csprojAssemblyReference.cache
 C:/Users/ch33f/Documents/Projects/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.deps.json
 C:/Users/ch33f/Documents/Projects/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.runtimeconfig.json
 C:/Users/ch33f/Documents/Projects/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.runtimeconfig.dev.json
@@ -87,3 +57,34 @@ C:/Users/Daniel/programming/SoftwareEngineering/FIU-Chat/FIU-Chat/obj/Debug/netc
 C:/Users/Daniel/programming/SoftwareEngineering/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.dll
 C:/Users/Daniel/programming/SoftwareEngineering/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.pdb
 C:/Users/Daniel/programming/SoftwareEngineering/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.csproj.CopyComplete
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.csproj.CoreCompileInputs.cache
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorAssemblyInfo.cache
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorAssemblyInfo.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.AssemblyInfoInputs.cache
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.AssemblyInfo.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.deps.json
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.runtimeconfig.json
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.runtimeconfig.dev.json
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.dll
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.pdb
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.Views.dll
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/bin/Debug/netcoreapp2.1/FIU-Chat.Views.pdb
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.TagHelpers.input.cache
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.TagHelpers.output.cache
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorCoreGenerate.cache
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Account/Index.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Account/LoggedIn.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Classes/Index.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/Error.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/_ViewImports.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/_ViewStart.g.cshtml.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorTargetAssemblyInfo.cache
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorTargetAssemblyInfo.cs
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.Views.pdb
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.dll
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.pdb
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.csproj.CopyComplete
+/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.csprojAssemblyReference.cache

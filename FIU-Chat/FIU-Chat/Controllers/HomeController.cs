@@ -13,8 +13,8 @@ namespace FIU_Chat.Controllers
     public class HomeController : Controller
     {
         private AuthenticateUser authenticateUser = new AuthenticateUser();
-        
-        public async Task<IActionResult> Index()
+
+        public IActionResult Index()
         {
             var request = Request;
             var headers = request.Headers;
@@ -22,7 +22,7 @@ namespace FIU_Chat.Controllers
             StringValues token;
             if (headers.TryGetValue("Authorization", out token))
             {
-                var result = await this.authenticateUser.ValidateToken(token);
+                var result = this.authenticateUser.ValidateToken(token);
                 if (result.Result == AuthenticateResult.Success)
                 {
                     return View();
