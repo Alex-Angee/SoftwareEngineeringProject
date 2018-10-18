@@ -74,7 +74,6 @@ C:/Users/Daniel/programming/SoftwareEngineering/FIU-Chat/FIU-Chat/obj/Debug/netc
 /Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/FIU-Chat.RazorCoreGenerate.cache
 /Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Account/Index.g.cshtml.cs
 /Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Account/LoggedIn.g.cshtml.cs
-/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Classes/Index.g.cshtml.cs
 /Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
 /Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/Error.g.cshtml.cs
 /Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs

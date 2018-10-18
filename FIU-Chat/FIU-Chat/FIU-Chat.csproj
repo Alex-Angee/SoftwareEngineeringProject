@@ -28,7 +28,6 @@
     <Folder Include="Identity\" />
     <Folder Include="ApiModels\" />
     <Folder Include="ApiModels\UpdateModel\" />
-    <Folder Include="Views\Classes\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Database Access Object\Command Objects\Student.cs" />

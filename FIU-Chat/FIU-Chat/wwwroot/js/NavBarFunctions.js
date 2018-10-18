@@ -10,6 +10,7 @@
             },
             success: function (response) {
                 $("body").html(response);
+                $("#classesDiv").animate({left:'0'},1000);
             }
         });
         return false;
