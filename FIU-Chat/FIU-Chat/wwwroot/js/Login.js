@@ -53,7 +53,6 @@
         for (var key in classes) {
             // check if the property/key is defined in the object itself, not in parent
             if (classes.hasOwnProperty(key)) {           
-                console.log("Professor: " + key);
                 var newDict = classes[key];
                 for(var i = 0; i < newDict.length; i++)
                 {
@@ -61,9 +60,9 @@
                     for (var innerKey in innerDict)
                     {
                         var Objli = $('<li class="classli"></li>');
-                        var Obja = $("<a></a>");
+                        var Obja = $('<a></a>');
 
-                        Obja.text("Class: " + innerKey + "\nSection: " + innerDict[innerKey]);
+                        Obja.text(key + " " + innerKey + " " + innerDict[innerKey]);
                         Objli.append(Obja);
                         Objul.append(Objli);
                     }
@@ -88,7 +87,7 @@
             contentType: 'application/json; charset=utf-8;',
             url: redirectUrl,
             success: function (response) {
-                $("body").html(response);
+                $("body").html(response.value.page);
                 loadClasses(classes);
                 $("#classesDiv").animate({left:'0'},1000);
             }

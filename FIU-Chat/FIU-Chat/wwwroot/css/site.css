@@ -39,7 +39,6 @@ body {
 }
 
 li.classli {
-    border: 1px solid black;
     list-style-position: inside;
     margin-top: 60px;
     margin-bottom: 60px;
