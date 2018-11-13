@@ -23,6 +23,35 @@ body {
     width: 100%;
 }
 
+/* Makes the side bar left-aligned*/
+#classesDiv {
+    position: absolute;
+    width: 300px;
+    left: -300px;
+    bottom: 0;
+    top: 51px;
+    background-color: #337ab7;
+}
+
+#classul {
+    list-style: none;
+    padding: 0;
+}
+
+li.classli {
+    list-style-position: inside;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+li.classli a {
+    color: white;
+}
+
+#classul:hover .classli:not(:hover) {
+    opacity: .5;
+}
+
 /* QR code generator */
 #qrCode {
     margin: 15px;
