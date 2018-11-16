@@ -38,6 +38,9 @@
           "lib/netstandard1.3/DnsClient.dll": {}
         }
       },
+      "jQuery/1.6.4": {
+        "type": "package"
+      },
       "JWT/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -52,6 +55,47 @@
         },
         "runtime": {
           "lib/netstandard1.3/JWT.dll": {}
+        }
+      },
+      "Microsoft.AspNet.SignalR/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.SignalR.JS": "2.2.2",
+          "Microsoft.AspNet.SignalR.SystemWeb": "2.2.2"
+        }
+      },
+      "Microsoft.AspNet.SignalR.Core/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "2.1.0",
+          "Microsoft.Owin.Security": "2.1.0",
+          "Newtonsoft.Json": "6.0.4",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.AspNet.SignalR.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.SignalR.Core.dll": {}
+        }
+      },
+      "Microsoft.AspNet.SignalR.JS/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.6.4"
+        }
+      },
+      "Microsoft.AspNet.SignalR.SystemWeb/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.SignalR.Core": "2.2.2",
+          "Microsoft.Owin.Host.SystemWeb": "2.1.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.AspNet.SignalR.SystemWeb.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.SignalR.SystemWeb.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -2661,6 +2705,40 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Owin/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Host.SystemWeb/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "2.1.0",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.Security.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Security.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.1.4": {
         "type": "package",
         "dependencies": {
@@ -2897,6 +2975,15 @@
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Owin.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -5101,6 +5188,22 @@
         "lib/netstandard1.3/DnsClient.xml"
       ]
     },
+    "jQuery/1.6.4": {
+      "sha512": "5zE0/7I6UWdLfoQYtZFUQ10dVNlmAp7QWOwI3Zhlz1RG/LM1DtfvW9aFbshMksogcfkyvnxHqOQ07ULXrMI8kw==",
+      "type": "package",
+      "path": "jquery/1.6.4",
+      "files": [
+        ".signature.p7s",
+        "Content/Scripts/jquery-1.6.4-vsdoc.js",
+        "Content/Scripts/jquery-1.6.4.js",
+        "Content/Scripts/jquery-1.6.4.min.js",
+        "Tools/install.ps1",
+        "Tools/jquery-1.6.4-vsdoc-para.js",
+        "Tools/uninstall.ps1",
+        "jquery.1.6.4.nupkg.sha512",
+        "jquery.nuspec"
+      ]
+    },
     "JWT/4.0.0": {
       "sha512": "Iq8WBwka61+w9XTdN9F5HCrgt4gguWfZGbd8lEAFjgY4aGwgteQuCHLNrDOZp2DE19IooeeEF3TGNwV+y/SSkA==",
       "type": "package",
@@ -5112,6 +5215,53 @@
         "lib/net46/JWT.xml",
         "lib/netstandard1.3/JWT.dll",
         "lib/netstandard1.3/JWT.xml"
+      ]
+    },
+    "Microsoft.AspNet.SignalR/2.2.2": {
+      "sha512": "5vLU1oyJPlM2Uhdyare4M0McCnYpflrDI2+cBNNgPengzkamEpB68SLthivNdKBe+BkBe0SQiVs5b0cdeRyQRQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr/2.2.2",
+      "files": [
+        ".signature.p7s",
+        "microsoft.aspnet.signalr.2.2.2.nupkg.sha512",
+        "microsoft.aspnet.signalr.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Microsoft.AspNet.SignalR.Core/2.2.2": {
+      "sha512": "G6gfNhaav88fY9a+Dgjv3M2jbEo4bV8J61kVPNhhWXyiblhdaXKbIsgC0rsl9/sfFY+3FEDZwC2Dp+4XfOPC5Q==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr.core/2.2.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/Microsoft.AspNet.SignalR.Core.dll",
+        "lib/net45/Microsoft.AspNet.SignalR.Core.xml",
+        "microsoft.aspnet.signalr.core.2.2.2.nupkg.sha512",
+        "microsoft.aspnet.signalr.core.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.SignalR.JS/2.2.2": {
+      "sha512": "kIBgKB7jX+MHMn7mZEgDNC1/T9Ab2qybPQGzJ6jhSOl/vMg5gaJbG/qyiq95MAmACywqvzHr8rgmkstt8mYgsQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr.js/2.2.2",
+      "files": [
+        ".signature.p7s",
+        "content/Scripts/jquery.signalR-2.2.2.js",
+        "content/Scripts/jquery.signalR-2.2.2.min.js",
+        "microsoft.aspnet.signalr.js.2.2.2.nupkg.sha512",
+        "microsoft.aspnet.signalr.js.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.SignalR.SystemWeb/2.2.2": {
+      "sha512": "ZeI8wH8eYnW2i2Uc2vnqVw14XncjoToz/VJm/vd70GynZEUw79H+iRcFZIJan6uuD0aYwnnx8kGYiJiaVBJV5Q==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr.systemweb/2.2.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/Microsoft.AspNet.SignalR.SystemWeb.XML",
+        "lib/net45/Microsoft.AspNet.SignalR.SystemWeb.dll",
+        "microsoft.aspnet.signalr.systemweb.2.2.2.nupkg.sha512",
+        "microsoft.aspnet.signalr.systemweb.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -7537,6 +7687,46 @@
         "version.txt"
       ]
     },
+    "Microsoft.Owin/2.1.0": {
+      "sha512": "nBuUV1pzyQmk1pYUIQHS7jFTAzpn8KBi6ZnaOKF9tMtDqwlmq49Liys2bSuyn+XTf3M236nvZmxloV74wfBPxQ==",
+      "type": "package",
+      "path": "microsoft.owin/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Microsoft.Owin.XML",
+        "lib/net40/Microsoft.Owin.dll",
+        "lib/net45/Microsoft.Owin.XML",
+        "lib/net45/Microsoft.Owin.dll",
+        "microsoft.owin.2.1.0.nupkg.sha512",
+        "microsoft.owin.nuspec"
+      ]
+    },
+    "Microsoft.Owin.Host.SystemWeb/2.1.0": {
+      "sha512": "Q6EvrJ32q+lJxlW6HOEYdAg0qyJsCrzgiebpzcPb0ecQiY1UHQhQ2C0Pk+OtK3gyJTQLWdmCJfUskk9mCW9wfg==",
+      "type": "package",
+      "path": "microsoft.owin.host.systemweb/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Microsoft.Owin.Host.SystemWeb.dll",
+        "lib/net40/Microsoft.Owin.Host.SystemWeb.xml",
+        "lib/net45/Microsoft.Owin.Host.SystemWeb.dll",
+        "lib/net45/Microsoft.Owin.Host.SystemWeb.xml",
+        "microsoft.owin.host.systemweb.2.1.0.nupkg.sha512",
+        "microsoft.owin.host.systemweb.nuspec"
+      ]
+    },
+    "Microsoft.Owin.Security/2.1.0": {
+      "sha512": "cBxD2Th9KQy3I6Y9CH7GRE2FlFywJY99CbVJrSD1BgwmJTE/2FWIS0ely/7F6k60jvVelSxzoN+/i7BX/lTktQ==",
+      "type": "package",
+      "path": "microsoft.owin.security/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/Microsoft.Owin.Security.XML",
+        "lib/net45/Microsoft.Owin.Security.dll",
+        "microsoft.owin.security.2.1.0.nupkg.sha512",
+        "microsoft.owin.security.nuspec"
+      ]
+    },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.1.4": {
       "sha512": "TD7kcw+VSlVt8HnYpWI0cycv5sbQt6TmsiIotsUNmTEGldTJNbz9VnnFHXM4OlPeykk+pzzI+85hGTvjHEyitQ==",
       "type": "package",
@@ -8092,6 +8282,17 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "Owin/1.0.0": {
+      "sha512": "S87+AKxSxfhXRzIQfm6WBxfGbnzECLG8bmVp3lRiwjeYG9YBJ0AXd+2Xn7I7aqwwj0j4erSpX6H9OhXy+qQ7tw==",
+      "type": "package",
+      "path": "owin/1.0.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Owin.dll",
+        "owin.1.0.0.nupkg.sha512",
+        "owin.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -13354,6 +13555,7 @@
     ".NETCoreApp,Version=v2.1": [
       "BCrypt-Official >= 0.1.109",
       "JWT >= 4.0.0",
+      "Microsoft.AspNet.SignalR >= 2.2.2",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.4",
@@ -13363,28 +13565,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/alexangee/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\ch33f\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/FIU-Chat.csproj",
+      "projectUniqueName": "C:\\Users\\ch33f\\Documents\\Projects\\SoftwareEngineeringProject\\FIU-Chat\\FIU-Chat\\FIU-Chat.csproj",
       "projectName": "FIU-Chat",
-      "projectPath": "/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/FIU-Chat.csproj",
-      "packagesPath": "/Users/alexangee/.nuget/packages/",
-      "outputPath": "/Users/alexangee/Documents/CEN 4010/SoftwareEngineeringProject/FIU-Chat/FIU-Chat/obj",
+      "projectPath": "C:\\Users\\ch33f\\Documents\\Projects\\SoftwareEngineeringProject\\FIU-Chat\\FIU-Chat\\FIU-Chat.csproj",
+      "packagesPath": "C:\\Users\\ch33f\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ch33f\\Documents\\Projects\\SoftwareEngineeringProject\\FIU-Chat\\FIU-Chat\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/alexangee/.config/NuGet/NuGet.Config"
+        "C:\\Users\\ch33f\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13401,40 +13605,44 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "BCrypt-Official": {
+            "target": "Package",
+            "version": "[0.1.109, )"
+          },
           "JWT": {
             "target": "Package",
-            "version": "4.0.0"
+            "version": "[4.0.0, )"
+          },
+          "Microsoft.AspNet.SignalR": {
+            "target": "Package",
+            "version": "[2.2.2, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.1.1"
+            "version": "[2.1.1, )",
+            "autoReferenced": true
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.1.0, )",
+            "autoReferenced": true
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "2.1.4"
+            "version": "[2.1.4, )"
           },
           "MongoDB.Driver": {
             "target": "Package",
-            "version": "2.7.0"
+            "version": "[2.7.0, )"
           },
           "System.Linq": {
             "target": "Package",
-            "version": "4.3.0"
+            "version": "[4.3.0, )"
           },
           "System.Linq.Expressions": {
             "target": "Package",
-            "version": "4.3.0"
-          },
-          "BCrypt-Official": {
-            "target": "Package",
-            "version": "0.1.109"
-          },
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.1",
-            "autoReferenced": true
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
@@ -13452,6 +13660,66 @@
       "warningLevel": 1,
       "message": "Package 'BCrypt-Official 0.1.109' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
       "libraryId": "BCrypt-Official",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.SignalR.Core 2.2.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.SignalR.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.SignalR.SystemWeb 2.2.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.SignalR.SystemWeb",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin 2.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Host.SystemWeb 2.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Host.SystemWeb",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Security 2.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Security",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"
       ]

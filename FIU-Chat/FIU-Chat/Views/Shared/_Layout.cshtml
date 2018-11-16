@@ -43,10 +43,7 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - Chat FIU</p>
-        </footer>
+
     </div>
 
     <environment include="Development">
@@ -69,10 +66,13 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+
     <script src="~/js/NavBarFunctions.js"></script>
     <script src="~/js/Login.js"></script>
     <script src="~/js/CheckLogin.js"></script>
     <script src="~/js/sweetalert.min.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

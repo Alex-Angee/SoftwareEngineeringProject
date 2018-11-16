@@ -109,6 +109,11 @@ namespace FIUChat.Identity
             };
         }
 
+        public async Task<User> GetUserFromToken(string token)
+        {
+            return await this.GetUser(this.GetEmail(token));
+        }
+
         public async Task<Dictionary<string, List<Dictionary<string, string>>>> GetUserDictionaryFromToken(string token)
         {
             return await this.GetUserDictionary(this.GetEmail(token));
@@ -125,6 +130,20 @@ namespace FIUChat.Identity
                 ValidAudience = "localhost",
                 IssuerSigningKey = AccountController.SIGNING_KEY // The same key as the one that generate the token
             };
+        }
+
+        private async Task<User> GetUser(string email)
+        {
+            Expression<Func<User, bool>> expression = x => x.Email == email;
+
+            var tempUser = new User(Guid.NewGuid())
+            {
+                Email = email
+            };
+
+            var foundUser = await this.serverToStorageFacade.ReadObjectByExpression(tempUser, expression);
+
+            return foundUser;
         }
 
         private string GetEmail(string token)
