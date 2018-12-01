@@ -14,16 +14,16 @@ connection.on("ReceiveMessage", function (user, message) {
 connection.start().catch(function (err) {
     return console.error(err.toString());
 });
+
 document.getElementById("sendButton").addEventListener("click", function (event) {
-
-    debugger;
+// Replacing line below with line above could resolve problems 
+//$(document).on('click', '#sendButton', function (event) {
+    event.preventDefault();
     var className = document.getElementById("#classTitle");
-
     var user = localStorage.getItem("token");
     var message = document.getElementById("messageInput").value;
     connection.invoke("SendMessage", user, className, message).catch(function (err) {
         return console.error(err.toString());
     });
-    event.preventDefault();
     $("#messageInput").val("");
 });

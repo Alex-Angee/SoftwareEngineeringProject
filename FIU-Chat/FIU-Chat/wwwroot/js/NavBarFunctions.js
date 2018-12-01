@@ -37,6 +37,7 @@
                 var parent = document.getElementById("classul");
                 console.log(parent);
                 parent.addEventListener("click", function (event) {
+                    event.preventDefault();
                     var className = event.target.tagName;
                     $("#classTitle").val(className);
                     loadMessages();
