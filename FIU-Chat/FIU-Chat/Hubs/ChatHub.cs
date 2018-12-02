@@ -21,9 +21,10 @@ namespace FIUChat.Hubs
             var user =  await authenticateUser.GetUserFromToken(token);
 
             var name = user.FirstName + " " + user.LastName;
-
-            await Clients.All.SendAsync("ReceiveMessage", name, message);
-
+            if (message != "")
+            {
+                await Clients.All.SendAsync("ReceiveMessage", name, message);
+            }
             string professorName = "", section= "";
 
             foreach (KeyValuePair<string, List<Dictionary<string, string>>> classes in user.ClassDictionary)
