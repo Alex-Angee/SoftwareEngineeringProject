@@ -103,6 +103,9 @@ namespace FIU_Chat.Controllers
                 return new MongoDBResultState { Result = MongoDBResult.Failure, Message = "Email/Password is incorrect." };
             }
 
+            List<List<Dictionary<string, string>>> addThisClass = new List<List<Dictionary<string, string>>>();
+            List<string> keys = new List<string>();
+
             foreach (KeyValuePair<string, List<Dictionary<string, string>>> addClasses in resultExists.ClassDictionary)
             {
                 foreach(KeyValuePair<string, Dictionary<string, string>> newClass in addClass.NewClasses)
@@ -113,11 +116,15 @@ namespace FIU_Chat.Controllers
                     }
                     else
                     {
-                        List<Dictionary<string, string>> addThisClass = new List<Dictionary<string, string>>();
-                        addThisClass.Add(newClass.Value);
-                        resultExists.ClassDictionary.Add(addClasses.Key, addThisClass);
+                        addThisClass.Add(new List<Dictionary<string, string>> { newClass.Value });
+                        keys.Add(newClass.Key);
                     }
                 }
+            }
+
+            for(int i = 0; i < keys.Count; i++)
+            {
+                resultExists.ClassDictionary.Add(keys[i], addThisClass[i]);
             }
 
             return await this.serverToStorageFacade.UpdateObject(resultExists);
